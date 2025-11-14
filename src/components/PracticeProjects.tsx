@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
 interface PracticeProjectProps {
   projects: {
     id: number;
@@ -9,7 +11,10 @@ interface PracticeProjectProps {
     liveUrl: string;
     codeUrl: string;
   }[];
-  technologies: Record<string, { name: string; color: string; icon: any }>;
+  technologies: Record<
+    string,
+    { name: string; color: string; icon: IconDefinition }
+  >;
 }
 
 export default function PracticeProjects({

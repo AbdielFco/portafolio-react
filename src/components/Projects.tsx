@@ -1,17 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
+import type { Project } from "../types/Project";
 interface ProjectProps {
-  projects: {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    tech: string[];
-    liveUrl: string;
-    codeUrl: string;
-    mode: "default" | "details";
-  }[];
-  technologies: Record<string, { name: string; color: string; icon: any }>;
+  projects: Project[];
+  technologies: Record<
+    string,
+    { name: string; color: string; icon: IconDefinition }
+  >;
 }
 
 export default function Projects({ projects, technologies }: ProjectProps) {

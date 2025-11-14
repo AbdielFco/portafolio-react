@@ -1,5 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
+export type ProjectMode = "default" | "details";
 interface AcademicProjectProps {
   projects: {
     id: number;
@@ -9,9 +12,12 @@ interface AcademicProjectProps {
     tech: string[];
     liveUrl: string;
     codeUrl: string;
-    mode: "default" | "details";
+    mode: ProjectMode;
   }[];
-  technologies: Record<string, { name: string; color: string; icon: any }>;
+  technologies: Record<
+    string,
+    { name: string; color: string; icon: IconDefinition }
+  >;
 }
 
 export default function AcademicProjects({

@@ -1,4 +1,6 @@
-export const featuredProjects = [
+import type { Project } from "../types/Project";
+
+export const featuredProjects: Project[] = [
   // {
   //   id: 1,
   //   title: "E-Commerce Platform",
@@ -9,7 +11,6 @@ export const featuredProjects = [
   //   tech: ["react", "typescript", "nodejs", "postgresql"],
   //   liveUrl: "#",
   //   codeUrl: "#",
-  //   type: "public",
   //   mode: "default",
   // },
   {
@@ -21,12 +22,11 @@ export const featuredProjects = [
     tech: ["angular", "typescript", "nodejs", "mariadb"],
     liveUrl: "https://abdielfco.github.io/agasapresentation/",
     codeUrl: "#",
-    type: "public",
     mode: "details", // default = demo + código
   },
 ];
 
-export const academicProjects = [
+export const academicProjects: Project[] = [
   {
     id: 1,
     title: "Portal Web cinncinatus",
@@ -36,7 +36,6 @@ export const academicProjects = [
     tech: ["react", "typescript", "nodejs", "postgresql"],
     liveUrl: "#",
     codeUrl: "#",
-    type: "public",
     mode: "details", // academic → solo botón detalles
   },
 ];
